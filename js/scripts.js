@@ -1,8 +1,9 @@
 //business logic
 //constructor for Pizza
-function Pizza(count, size) {
-  this.count = count;
+function Pizza(toppings, size) {
+  this.toppings = toppings;
   this.size = size;
+  this.count = 0;
   this.price = 10;
 }
 
@@ -28,33 +29,48 @@ function resetFields() {
     $("select.size").val("");
 }
 
+// function readCheckboxes() {
+//   var checkedValue = null;
+//   var inputElements = document.getElementsByClassName('toppings');
+//   for(var i=0; inputElements[i]; ++i){
+//         if(inputElements[i].checked){
+//              checkedValue = inputElements[i].value;
+//              break;
+//         }
+//   }
+//
+// }
+
+
 // user interface logic
 $(document).ready(function() {
-
-
   $("form#pizza").submit(function(event) {
     event.preventDefault();
 
-    // var inputtedToppings = [];
+    var inputtedToppings = [];
+    $("input:checkbox[name=toppings]:checked").each(function(){
+    inputtedToppings.push($(this).val());
+});
     // $("input[name='toppings']:checked").each(function (i) {
-    //   inputtedToppings[i] = $(this).val();
+    //   inputtedToppings.push((this).val());
     // });
+
+    console.log(inputtedToppings);
 
     var inputtedSize= $("select.size").val();
 
-    var newPizza = new Pizza(inputtedSize);
-    var inputtedCount = newPizza.countChecked();
-    console.log(newPizza.count);
+    var newPizza = new Pizza(inputtedToppings, inputtedSize);
+    newPizza.countChecked();
 
     var resultPrice = newPizza.pizzaPrice();
 
 
       $("#show-price").show();
 
-      $("#toppings").html( $("input:checked" ).val());
+    $("#toppings").text(newPizza.toppings);
       $("#size").text(newPizza.size);
-      $("#price").text(resultPrice);
 
+      $("#price").text(resultPrice);
 
     resetFields();
 
