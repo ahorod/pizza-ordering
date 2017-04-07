@@ -1,12 +1,19 @@
 #show-price {
+  display: none;
   font-family: monospace;
-
   font-size: 18px;
+}
+#gift {
+  display: none;
+  color: white;
+  background-color:darkred;
+}
+h1 {
+  color: darkred;
 }
 
 .row {
   font-family: monospace;
-
   font-size: 18px;
 
 }
@@ -22,6 +29,7 @@ h3 {
   font-size: 30px;
 }
 .btn {
-  background-color:darkred;
+  background-color:darkgreen;
   font-size: 18px;
+  color: white;
 }

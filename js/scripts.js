@@ -27,6 +27,7 @@ Pizza.prototype.pizzaPrice = function() {
 function resetFields() {
     $(".toppings").prop( "checked", false );
     $("select.size").val("medium");
+
 }
 
 // user interface logic
@@ -52,10 +53,15 @@ $(document).ready(function() {
 
 
       $("#show-price").show();
-
       $("#toppings").text(newPizza.toppings);
       $("#size").text(newPizza.size);
       $("#price").text(resultPrice);
+      if (resultPrice >=15){
+        $("#gift").show();
+      }
+      else {
+        $("#gift").hide();
+      }
 
     resetFields();
 
