@@ -1,50 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.0.js"></script>
     <script src="js/scripts.js"></script>
     <title>Donna Stella Pizzeria</title>
-  </head>
-  <body>
+</head>
+<body>
     <div class="container-fluid">
-      <h1>Donna Stella Pizzeria</h1>
+        <h1>Donna Stella Pizzeria</h1>
 
-      <div class="row">
-        <div class="col-md-6">
-            <form id="pizza">
-              <label for="toppings"><h3>Select pizza toppings</h3></label><br>
-                <input class = "toppings" type="checkbox" value="mozzarella" checked="">mozzarella</br>
-                <input class = "toppings" type="checkbox" value="pepperoni" checked="">pepperoni</br>
-                <input class = "toppings" type="checkbox" value="artichoke" checked="">artichoke</br>
-                <input class = "toppings" type="checkbox" value="anchovie" checked="">anchovie</br>
+        <div class="row">
+            <div class="col-md-6">
+                <form id="pizza">
+                    <label for="toppings"><h3>Select pizza toppings</h3></label><br>
+                    <input class="toppings" type="checkbox" value="mozzarella" checked="">mozzarella</br>
+                    <input class="toppings" type="checkbox" value="pepperoni" checked="">pepperoni</br>
+                    <input class="toppings" type="checkbox" value="artichoke" checked="">artichoke</br>
+                    <input class="toppings" type="checkbox" value="anchovie" checked="">anchovie</br>
 
-            <div class="form-group">
-              <label for="size"><h3>Select pizza size</h3></label><br>
-              <select class="form-control size">
-                <option value="medium">medium</option>
-                <option value="large">large</option>
-              </select>
+                    <div class="form-group">
+                        <label for="size"><h3>Select pizza size</h3></label><br>
+                        <select class="form-control size">
+                            <option value="medium">medium</option>
+                            <option value="large">large</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="promo"><h4>Promocode</h4></label>
+                        <input type="text" class="form-control" id="promo">
+                    </div>
+                    <div class="form-group">
+                        <label for="name"><h4>Name</h4></label>
+                        <input type="text" class="form-control" id="name">
+                    <!-- </div> -->
+                    <!-- <div class="form-group"> -->
+                        <label for="address"><h4>Address</h4></label>
+                        <input type="text" class="form-control" id="address">
+                    <!-- </div> -->
+                    <!-- <div class="form-group"> -->
+                        <label for="building"><h4>Phone Number</h4></label>
+                        <input type="text" class="form-control" id="phone">
+                    </div>
+                    <button type="submit" class="btn">Order</button>
+                </form>
             </div>
-            <button type="submit" class="btn">Order</button>
-          </form>
-        </div>
 
-        <div class="col-md-6">
-          <div id="show-price">
-            <h3>Your pizza</h3>
-            <ul id="pizza-receipt">
-              <p>Toppings: <span id="toppings"></span></p>
-              <p>Size: <span id="size"></span></p>
-              <p>Price: <span id="price"></span></p>
-            </ul>
-          </div>
-          <div id="gift">
-            <p>Enjoy your pizza with gift bottle of Chianti! Drinks on us today!</p>
-          </div>
+            <div class="col-md-6">
+                <div class="well" id="show-price">
+                    <h4>Dear <span class="custom" id="client-name"></span>, your pizza:</h4>
+                    <ul id="pizza-receipt">
+                        <p>Toppings: <span class="custom" id="toppings"></span></p>
+                        <p>Size: <span class="custom" id="size"></span></p>
+                        <p>Price: <span class="custom" id="price"></span></p>
+                    </ul>
+                    <p>Will be deliverd at <span class="custom" id="client-address"></span></p>
+                    <p>We will call you at <span class="custom" id="client-phone"></span></p>
+                    <div id="gift">
+                        <p>Enjoy your pizza with gift bottle of Chianti! Drinks on us today!</p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-      </div>
-  </body>
+    </div>
+</body>
 </html>
