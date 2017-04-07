@@ -26,21 +26,8 @@ Pizza.prototype.pizzaPrice = function() {
 //function resets form
 function resetFields() {
     $(".toppings").prop( "checked", false );
-    $("select.size").val("");
+    $("select.size").val("medium");
 }
-
-// function readCheckboxes() {
-//   var checkedValue = null;
-//   var inputElements = document.getElementsByClassName('toppings');
-//   for(var i=0; inputElements[i]; ++i){
-//         if(inputElements[i].checked){
-//              checkedValue = inputElements[i].value;
-//              break;
-//         }
-//   }
-//
-// }
-
 
 // user interface logic
 $(document).ready(function() {
@@ -48,10 +35,11 @@ $(document).ready(function() {
     event.preventDefault();
 
     var inputtedToppings = [];
-    $("input:checkbox[name=toppings]:checked").each(function(){
-    inputtedToppings.push($(this).val());
-});
-
+    $("input:checkbox[class=toppings]").each(function(){
+      if($(this).is(':checked')){
+          inputtedToppings.push(($(this).val()));
+      }
+      });
 
     console.log(inputtedToppings);
 
@@ -67,10 +55,9 @@ $(document).ready(function() {
 
       $("#toppings").text(newPizza.toppings);
       $("#size").text(newPizza.size);
-
       $("#price").text(resultPrice);
 
     resetFields();
 
   });
-});
+    });

@@ -1,0 +1,27 @@
+#show-price {
+  font-family: monospace;
+
+  font-size: 18px;
+}
+
+.row {
+  font-family: monospace;
+
+  font-size: 18px;
+
+}
+
+.size{
+  font-size:18px;
+}
+body {
+  background-image: url(/Users/serhiy/Desktop/pizza/img/pizza.jpg);
+}
+
+h3 {
+  font-size: 30px;
+}
+.btn {
+  background-color:darkred;
+  font-size: 18px;
+}
