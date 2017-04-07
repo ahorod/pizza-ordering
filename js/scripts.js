@@ -25,7 +25,7 @@ Pizza.prototype.pizzaPrice = function() {
 }
 //function resets form
 function resetFields() {
-    $("input.toppings").val("none");
+    $(".toppings").prop( "checked", false );
     $("select.size").val("");
 }
 
@@ -51,9 +51,7 @@ $(document).ready(function() {
     $("input:checkbox[name=toppings]:checked").each(function(){
     inputtedToppings.push($(this).val());
 });
-    // $("input[name='toppings']:checked").each(function (i) {
-    //   inputtedToppings.push((this).val());
-    // });
+
 
     console.log(inputtedToppings);
 
@@ -67,7 +65,7 @@ $(document).ready(function() {
 
       $("#show-price").show();
 
-    $("#toppings").text(newPizza.toppings);
+      $("#toppings").text(newPizza.toppings);
       $("#size").text(newPizza.size);
 
       $("#price").text(resultPrice);

@@ -7,10 +7,10 @@
 * Create prototype method to calculate pizza cost
 
 ## Setup
-* Clone this repository https://github.com/ahorod/pizza
+* Clone this repository https://github.com/ahorod/pizza-ordering
 * Open index.html in browser
 or
-* Visit at https://ahorod.github.io/pizza
+* Visit at https://ahorod.github.io/pizza-ordering
 
 ## Technologies Used
 * HTML
