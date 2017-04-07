@@ -33,6 +33,7 @@ Pizza.prototype.pizzaPrice = function() {
     this.price -= 3;
   }
 
+
   return(this.price);
 }
 //function resets form
@@ -71,9 +72,11 @@ $(document).ready(function() {
       $("#client-name").text(newClient.name);
       $("#client-address").text(newClient.address);
       $("#client-phone").text(newClient.phone);
+      
       $("#toppings").text(newPizza.toppings);
       $("#size").text(newPizza.size);
       $("#price").text(resultPrice + "$");
+
       if (resultPrice >=15){
         $("#gift").show();
       }

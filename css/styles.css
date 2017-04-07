@@ -14,11 +14,16 @@
   color: white;
   background-color:darkred;
 }
-
+/*
 h1 {
   color: darkred;
-}
+}*/
 
+h1 {
+  font: 400 130px/0.8 'Great Vibes', Helvetica, sans-serif;
+  color: darkred;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+}
 
 .row {
   font-family: monospace;
