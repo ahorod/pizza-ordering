@@ -29,10 +29,9 @@ Pizza.prototype.pizzaPrice = function() {
   if (this.count > 0) {
     this.price += this.count*2;
   }
-  if (this.promo = "SPRING"){
+  if (this.promo === "SPRING"){
     this.price -= 3;
   }
-
 
   return(this.price);
 }
@@ -72,7 +71,7 @@ $(document).ready(function() {
       $("#client-name").text(newClient.name);
       $("#client-address").text(newClient.address);
       $("#client-phone").text(newClient.phone);
-      
+
       $("#toppings").text(newPizza.toppings);
       $("#size").text(newPizza.size);
       $("#price").text(resultPrice + "$");
