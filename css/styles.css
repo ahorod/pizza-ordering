@@ -14,11 +14,9 @@
   color: white;
   background-color:darkred;
 }
-/*
-h1 {
-  color: darkred;
-}*/
-
+.pizza-container {
+  margin-top: 2em;
+}
 h1 {
   font: 400 130px/0.8 'Great Vibes', Helvetica, sans-serif;
   color: darkred;
