@@ -35,7 +35,7 @@ h1 {
   font-size:18px;
 }
 body {
-  background-image: url(/Users/serhiy/Desktop/pizza/img/pizza.jpg);
+  background-image: url(../img/pizza.jpg);
 }
 
 h3 {
