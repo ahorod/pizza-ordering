@@ -14,11 +14,9 @@
   color: white;
   background-color:darkred;
 }
-/*
-h1 {
-  color: darkred;
-}*/
-
+.pizza-container {
+  margin-top: 2em;
+}
 h1 {
   font: 400 130px/0.8 'Great Vibes', Helvetica, sans-serif;
   color: darkred;
@@ -35,7 +33,11 @@ h1 {
   font-size:18px;
 }
 body {
-  background-image: url(/Users/serhiy/Desktop/pizza/img/pizza.jpg);
+  background-image: url(../img/pizza.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #9F9F9F;
 }
 
 h3 {
